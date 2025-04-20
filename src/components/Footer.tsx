@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="col-span-1">
-            <h3 className="text-xl font-bold text-glam-purple mb-4">ETHEREAL THREADS</h3>
+            <h3 className="text-xl font-bold text-glam-purple mb-4">GLAM JEWELS</h3>
             <p className="text-gray-600 mb-4">
               Plot Nos 8, 11,<br />
               TechZone 2, Greater Noida,<br />

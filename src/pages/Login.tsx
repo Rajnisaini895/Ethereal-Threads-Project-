@@ -53,7 +53,7 @@ const Login = () => {
     setTimeout(() => {
       toast({
         title: "Login Successful",
-        description: "Welcome back to Ethereal Threads!",
+        description: "Welcome back to GLAM JEWELS!",
       });
       setIsSubmitting(false);
     }, 1500);
@@ -93,7 +93,7 @@ const Login = () => {
           )}
         >
           <div className="p-8">
-            <h1 className="text-3xl font-bold text-center mb-8">Welcome to Ethereal Threads</h1>
+            <h1 className="text-3xl font-bold text-center mb-8">Welcome to GLAM JEWELS</h1>
             
             <Tabs defaultValue="login" className="w-full">
               <TabsList className="grid w-full grid-cols-2 mb-6">
@@ -151,7 +151,7 @@ const Login = () => {
                     <Input 
                       id="register-name" 
                       name="name"
-                      placeholder="Ethereal Threads" 
+                      placeholder="GLAM JEWELS" 
                       value={registerForm.name}
                       onChange={handleRegisterInputChange}
                       required 

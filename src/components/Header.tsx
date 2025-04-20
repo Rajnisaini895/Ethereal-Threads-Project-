@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext';
@@ -6,10 +5,20 @@ import { Home, Package, Info, Phone, ShoppingCart, Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
-const Header = () => {      {/*  defines the main header component*/}
-  const { totalItems } = useCart();     {/*uses the useCart hook to get the current number of items*/}
-  const [isScrolled, setIsScrolled] = useState(false); {/* used to change the header's appearance on scroll.*/}
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);   {/* controls whether the mobile menu is visible or not..*/}
+type NavLinkProps = {
+  to: string;
+  icon: React.ReactNode;
+  label: string;
+};
+
+type MobileNavLinkProps = NavLinkProps & {
+  onClick: () => void;
+};
+
+const Header = () => {
+  const { totalItems } = useCart();
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
@@ -26,20 +35,18 @@ const Header = () => {      {/*  defines the main header component*/}
     <header
       className={cn(
         'fixed w-full z-50 transition-all duration-300',
-        isScrolled 
-          ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' 
-          : 'bg-transparent py-4'
+        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-4'
       )}
     >
-      <div className="container-custom flex items-center justify-between">
-        <Link 
-          to="/" 
-          className="flex items-center group"
-        >
-          <h1 className="text-2xl font-bold text-glam-purple transition-colors duration-300 group-hover:text-glam-purple-dark">
-          ETHEREAL THREADS
-          </h1>
-        </Link>
+      
+      
+      <div className="container-custom flex items-center justify-between ">
+     
+        <img className='logo' src="G-4-removebg-preview.png"   />
+        <Link to="/"></Link>
+      
+    
+      
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
@@ -47,7 +54,9 @@ const Header = () => {      {/*  defines the main header component*/}
           <NavLink to="/products" icon={<Package size={18} />} label="PRODUCTS" />
           <NavLink to="/about" icon={<Info size={18} />} label="ABOUT" />
           <NavLink to="/contact" icon={<Phone size={18} />} label="CONTACT" />
-          <NavLink to="/cart" icon={
+          <NavLink 
+            to="/cart" 
+            icon={
               <div className="relative">
                 <ShoppingCart size={18} />
                 {totalItems > 0 && (
@@ -62,6 +71,12 @@ const Header = () => {      {/*  defines the main header component*/}
           <Button asChild className="ml-4 bg-glam-purple hover:bg-glam-purple-dark transition-colors duration-300">
             <Link to="/login">Login</Link>
           </Button>
+          <Button asChild className='ml-5 bg-glam-purple hover:bg-glam-purple-dark transition-colors duration-300"'>
+          <Link to="/AdminPage" >ADMIN</Link>
+
+          </Button>
+         
+
         </nav>
 
         {/* Mobile Menu Button */}
@@ -74,10 +89,7 @@ const Header = () => {      {/*  defines the main header component*/}
               </span>
             )}
           </Link>
-          <button 
-            onClick={toggleMobileMenu} 
-            className="text-glam-purple focus:outline-none"
-          >
+          <button onClick={toggleMobileMenu} className="text-glam-purple focus:outline-none">
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -106,33 +118,16 @@ const Header = () => {      {/*  defines the main header component*/}
 };
 
 // Desktop Navigation Link Component
-const NavLink = ({ to, icon, label }: { to: string; icon: React.ReactNode; label: string }) => (
-  <Link 
-    to={to} 
-    className="custom-link flex items-center space-x-1 text-sm font-medium"
-  >
+const NavLink: React.FC<NavLinkProps> = ({ to, icon, label }) => (
+  <Link to={to} className="custom-link flex items-center space-x-1 text-sm font-medium">
     {icon}
     <span>{label}</span>
   </Link>
 );
 
 // Mobile Navigation Link Component
-const MobileNavLink = ({ 
-  to, 
-  icon, 
-  label, 
-  onClick 
-}: { 
-  to: string; 
-  icon: React.ReactNode; 
-  label: string;
-  onClick: () => void;
-}) => (
-  <Link 
-    to={to} 
-    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200"
-    onClick={onClick}
-  >
+const MobileNavLink: React.FC<MobileNavLinkProps> = ({ to, icon, label, onClick }) => (
+  <Link to={to} className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200" onClick={onClick}>
     <span className="text-glam-purple">{icon}</span>
     <span className="font-medium">{label}</span>
   </Link>

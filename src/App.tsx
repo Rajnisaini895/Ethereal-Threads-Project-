@@ -13,11 +13,15 @@ import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
+import Admin from "./adminpage/AdminPage";
+
 import { CartProvider } from "./contexts/CartContext";
+
 
 const queryClient = new QueryClient();
 
 const App = () => (
+  
   <QueryClientProvider client={queryClient}>
     <CartProvider>
       <TooltipProvider>
@@ -34,6 +38,8 @@ const App = () => (
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/login" element={<Login />} />
+                
+               
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
@@ -43,6 +49,9 @@ const App = () => (
       </TooltipProvider>
     </CartProvider>
   </QueryClientProvider>
+
 );
+
+
 
 export default App;

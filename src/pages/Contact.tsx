@@ -100,7 +100,7 @@ const Contact = () => {
                       name="name" 
                       value={formState.name}
                       onChange={handleInputChange}
-                      placeholder="Ethereal Threads" 
+                      placeholder="GLAM JEWELS" 
                       className="focus-visible:ring-glam-purple"
                       required 
                     />
@@ -113,7 +113,7 @@ const Contact = () => {
                       type="email" 
                       value={formState.email}
                       onChange={handleInputChange}
-                      placeholder="etherealthreads@example.com" 
+                      placeholder="GLAMJEWELS@example.com" 
                       className="focus-visible:ring-glam-purple"
                       required 
                     />
@@ -188,7 +188,7 @@ const Contact = () => {
                 <ContactInfo 
                   icon={<Mail className="text-glam-purple h-5 w-5" />}
                   title="Email Address"
-                  content={<p>contact@etherealthreads.com</p>}
+                  content={<p>contact@GLAMJEWELS.com</p>}
                 />
                 
                 <ContactInfo 

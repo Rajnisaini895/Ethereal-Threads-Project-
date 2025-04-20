@@ -28,7 +28,7 @@ const About = () => {
               isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             )}
           >
-            Discover the artistry and passion behind Ethereal Threads
+            Discover the artistry and passion behind  GLAM JEWELS
           </p>
         </div>
       </section>
@@ -43,7 +43,7 @@ const About = () => {
                 isVisible ? "translate-x-0 opacity-100" : "-translate-x-20 opacity-0"
               )}
             >
-              <h2 className="text-3xl font-bold mb-6">The Ethereal Threads Journey</h2>
+              <h2 className="text-3xl font-bold mb-6">The GLAM JEWELS Journey</h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti cum repellendus earum omnis blanditiis veniam repudiandae culpa similique, dignissimos expedita suscipit aliquid nesciunt quo atque pariatur necessitatibus eaque! Alias!
 
@@ -121,30 +121,30 @@ const About = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <TeamMember
-              name="Akshita Singh"
-              role="Founder & Lead Designer"
-              image="src/pages/our team/WhatsApp Image 2025-03-26 at 16.19.50.jpeg"
+              name="Aman"
+              role="Marketing & Product Design"
+              image="src/pages/our team/WhatsApp Image 2025-04-19 at 19.51.29 2.JPEG"
               delay={900}
               isVisible={isVisible}
             />
             <TeamMember
               name="Rajni Saini"
-              role="Tech Head"
+              role="Founder & Lead Designer,Tech Head"
               image="src/pages/our team/WhatsApp Image 2025-03-26 at 16.11.50.jpeg"
               delay={1000}
               isVisible={isVisible}
             />
             <TeamMember
               name="Neha Saini"
-              role="Creative Director"
+              role="Creative Director, Tech Support"
               image="src/pages/our team/WhatsApp Image 2025-03-26 at 16.42.35.jpeg"
               delay={1100}
               isVisible={isVisible}
             />
             <TeamMember
-              name="Tisha Kushwah"
-              role="Production Manager"
-              image="src/pages/our team/WhatsApp Image 2025-03-26 at 22.58.33.jpeg"
+              name="Anisha"
+              role="Co- designer & Production Manager"
+              image="src/pages/our team/PHOTO-2025-02-17-10-43-19 2.jpg"
               delay={1200}
               isVisible={isVisible}
             />

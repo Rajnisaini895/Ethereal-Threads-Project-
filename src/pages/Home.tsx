@@ -26,8 +26,9 @@ const Home = () => {
           isVisible ? "translate-x-0 opacity-100" : "-translate-x-20 opacity-0" // Simple entrance animation
         )}
       >
+        
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-          WELCOME TO <span className="text-glam-purple">ETHEREAL THREADS</span>
+          WELCOME TO <span className="text-glam-purple"> GLAM JEWELS</span>
         </h1>
         <p className="text-gray-600 text-lg mb-6 leading-relaxed">
           Unveil the magic of handcrafted jewelry, where artistry meets individuality. 
@@ -63,7 +64,7 @@ const Home = () => {
       >
         <div className="rounded-lg overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-105">
           <img 
-            src="public/lovable-uploads/WhatsApp Image 2025-03-26 at 23.50.13.jpeg" 
+            src="src/pages/IMG_0034.JPG" 
             alt="Luxury pearl necklace in an elegant jewelry box" 
             className="w-auto h-auto  object-cover"
           />
